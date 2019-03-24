@@ -1,0 +1,13 @@
+.Home_main {
+    position: absolute;
+    left: 42%;
+    bottom: 60%;
+        .Home_firstDiv {
+            display: flex;
+            flex-direction: column;
+        }
+        .button.ui.green.inverted.button {
+            width: 50%;
+            margin: 1rem 5rem;
+        }
+}
