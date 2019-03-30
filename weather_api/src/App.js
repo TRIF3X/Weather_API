@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="Home_main">
-        <h2>Welcome to WeatherAPI</h2>
+        <h1>Welcome to WeatherAPI</h1>
         <WeatherInput />
       </div>
     );

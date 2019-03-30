@@ -50,8 +50,7 @@ export default class WeatherInput extends Component {
                     placeholder='Zip code'
                 />
                 <Button
-                    color={'green'} 
-                    inverted 
+                    color={'orange'} 
                     onClick={() => this.getLocation(this.state.location)}
                     content='Get Weather'
                 />

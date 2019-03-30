@@ -1,6 +1,11 @@
 #root {
     width: 100%;
     height: 100%;
+    background: url(./Images/atmosphere-background-beautiful-531756.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .Home_main {
@@ -10,11 +15,14 @@
     width: 100%;
     height: 100%;
     flex-direction: column;
+        h1 {
+            color: #F1721B;
+        }
         .Home_input {
             display: flex;
             flex-direction: column;
         }
-        .button.ui.green.inverted.button {
+        .button.ui.button {
             width: 50%;
             margin: 1rem 5rem;
         }
