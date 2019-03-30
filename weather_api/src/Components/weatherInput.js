@@ -47,7 +47,7 @@ export default class WeatherInput extends Component {
                     name='location'
                     value={this.state.input}
                     onChange={this.handleChange}
-                    placeholder='City or Zip code'
+                    placeholder='Zip code'
                 />
                 <Button
                     color={'green'} 

@@ -1,7 +1,15 @@
+#root {
+    width: 100%;
+    height: 100%;
+}
+
 .Home_main {
-    position: absolute;
-    left: 42%;
-    bottom: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
         .Home_input {
             display: flex;
             flex-direction: column;
