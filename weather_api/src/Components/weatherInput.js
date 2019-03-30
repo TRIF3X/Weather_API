@@ -10,7 +10,8 @@ export default class WeatherInput extends Component {
         super()
         this.state = {
             location: '',
-            results: null
+            results: null,
+            error: null,
         }
     }
 
@@ -28,11 +29,12 @@ export default class WeatherInput extends Component {
                 }
             })
             .then(weather => {
+                this.setState({ error: null })
                 this.setState({ results: weather })
-                console.log(weather)
             })
             .catch(err => {
-                console.log(err)
+                this.setState({ results: null })
+                this.setState({ error: err })
             })
 
     }
@@ -55,6 +57,7 @@ export default class WeatherInput extends Component {
                 />
             </div>
             {this.state.results == null ? null : WeatherCard(this.state.results)}
+            {this.state.error != null ? <div>Invalid zipcode</div> : null}
         </div>
         )
     }
