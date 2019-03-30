@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Input } from 'semantic-ui-react';
-import { Button } from 'semantic-ui-react';
+import { Input, Button } from 'semantic-ui-react';
 import Axios from 'axios';
+import WeatherCard from './weatherCard.js'
 import '../App.scss';
 
 
@@ -23,6 +23,7 @@ export default class WeatherInput extends Component {
             .get("https://api.openweathermap.org/data/2.5/weather", {
                 params: {
                     zip: location,
+                    units: 'imperial',
                     APPID: '5da81634d0b1d96291395744db3c9d33'
                 }
             })
@@ -38,19 +39,22 @@ export default class WeatherInput extends Component {
 
     render() {
         return(
-        <div className='Home_input'>
-            <Input
-                name='location'
-                value={this.state.input}
-                onChange={this.handleChange}
-                placeholder='City or Zip code'
-            />
-            <Button
-                color={'green'} 
-                inverted 
-                onClick={() => this.getLocation(this.state.location)}
-                content='Get Weather'
-            />
+        <div>
+            <div className='Home_input'>
+                <Input
+                    name='location'
+                    value={this.state.input}
+                    onChange={this.handleChange}
+                    placeholder='City or Zip code'
+                />
+                <Button
+                    color={'green'} 
+                    inverted 
+                    onClick={() => this.getLocation(this.state.location)}
+                    content='Get Weather'
+                />
+            </div>
+            {this.state.results == null ? null : WeatherCard(this.state.results)}
         </div>
         )
     }
