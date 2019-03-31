@@ -1,2 +1,4 @@
 # Weather_API
-An app that will display weather by either the city name or zip code
+An app that displays current weather by zipcode
+
+Uses the free weather API from https://openweathermap.org/api
