@@ -11,6 +11,7 @@ const time = date.toLocaleTimeString("en-US", {
     "minute": "2-digit"
 });
 
+
 const WeatherCard = (props) => (
     <Card>
         <Card.Content>
@@ -20,13 +21,13 @@ const WeatherCard = (props) => (
         </Card.Content>
         <Card.Content>
             <Card.Header textAlign='center'>Details</Card.Header>
-            <Card.Content>Current {props.data.main.temp} &#x2109;</Card.Content>
-            <Card.Content>High {props.data.main.temp_max} &#x2109;</Card.Content>
-            <Card.Content>Low {props.data.main.temp_min} &#x2109;</Card.Content>
-            <Card.Content>Wind {props.data.wind.speed} mph</Card.Content>
-            <Card.Content>Humidity {props.data.main.humidity}%</Card.Content>
+            <Card.Content>Current &nbsp;&nbsp; {props.data.main.temp} &#x2109;</Card.Content>
+            <Card.Content>High &nbsp;&nbsp; {props.data.main.temp_max} &#x2109;</Card.Content>
+            <Card.Content>Low &nbsp;&nbsp; {props.data.main.temp_min} &#x2109;</Card.Content>
+            <Card.Content>Wind &nbsp;&nbsp; {props.data.wind.speed} mph</Card.Content>
+            <Card.Content>Humidity &nbsp;&nbsp; {props.data.main.humidity}%</Card.Content>
         </Card.Content>
-        <Card.Content extra>
+        <Card.Content extra className='card_extra'>
             {today}  {time}
         </Card.Content>
     </Card>
